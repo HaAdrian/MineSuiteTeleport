@@ -17,11 +17,7 @@
     <repositories>
         <repository>
             <id>spigot-server-repo</id>
-            <url>http://maven.elmakers.com/repository/</url>
-        </repository>
-        <repository>
-            <id>enigmar-repo</id>
-            <url>https://repository.enigmar.de/</url>
+            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
         </repository>
     </repositories>
     <dependencies>
@@ -29,13 +25,15 @@
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot</artifactId>
-            <version>1.13-R0.1-SNAPSHOT</version>
+            <version>1.21.4-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>de.linzn</groupId>
             <artifactId>mineSuiteCore</artifactId>
             <version>2.1.0</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/libs/mineSuiteCore.jar</systemPath>
         </dependency>
     </dependencies>
     <build>
