@@ -32,7 +32,7 @@ public class TeleportManager {
         Player p = Bukkit.getPlayer(playerUUID);
         Player t = Bukkit.getPlayer(targetUUID);
         if (p != null) {
-            Bukkit.getScheduler().runTask(TeleportPlugin.inst(), () -> {
+            Bukkit.getScheduler().scheduleSyncDelayedTask(TeleportPlugin.inst(), () -> {
                 p.setFallDistance(0F);
                 p.teleport(t);
             });
@@ -61,7 +61,7 @@ public class TeleportManager {
         }
         Player p = Bukkit.getPlayer(playerUUID);
         if (p != null) {
-            Bukkit.getScheduler().runTask(TeleportPlugin.inst(), () -> {
+            Bukkit.getScheduler().scheduleSyncDelayedTask(TeleportPlugin.inst(), () -> {
                 // Check if Block is safe
                 if (LocationUtil.isBlockUnsafe(t.getWorld(), t.getBlockX(), t.getBlockY(), t.getBlockZ())) {
                     try {
